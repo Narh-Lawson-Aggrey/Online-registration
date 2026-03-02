@@ -1,0 +1,113 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+    // Variables to store user information
+    string surname, firstName, otherNames, dateOfBirth, placeOfBirth, hometown, residentialAddress;
+    string motherName, motherHometown, motherMortalityStatus;
+    string fatherName, fatherHometown, fatherMortalityStatus;
+    string parentsMaritalCondition;
+    int motherAge, fatherAge;
+
+    // Welcome header
+    cout << "____________________________________________________" << endl;
+    cout << "          ONLINE PROGRAM REGISTRATION SYSTEM        " << endl;
+    cout << "____________________________________________________" << endl;
+    cout << "Please fill in the registration form below.\n" << endl;
+
+    // Personal Information Section
+    cout << "=== PERSONAL INFORMATION ===" << endl;
+    cout << "Surname: ";
+    getline(cin, surname);
+
+    cout << "First Name: ";
+    getline(cin, firstName);
+
+    cout << "Other Name(s) (Optional): ";
+    getline(cin, otherNames);
+
+    cout << "Date of Birth (DD/MM/YYYY): ";
+    getline(cin, dateOfBirth);
+
+    cout << "Place of Birth: ";
+    getline(cin, placeOfBirth);
+
+    cout << "Hometown: ";
+    getline(cin, hometown);
+
+    cout << "Residential Address: ";
+    getline(cin, residentialAddress);
+
+    // Mother's Information Section
+    cout << "\n=== MOTHER'S INFORMATION ===" << endl;
+    cout << "Mother's Full Name (Surname first): ";
+    getline(cin, motherName);
+
+    cout << "Mother's Hometown: ";
+    getline(cin, motherHometown);
+
+    string tempAge;
+    cout << "Mother's Age: ";
+    getline(cin, tempAge);
+    motherAge = stoi(tempAge);  // Convert string to integer
+
+    cout << "Mother's Mortality Status (Alive / Deceased): ";
+    getline(cin, motherMortalityStatus);
+
+    // Father's Information Section
+    cout << "\n=== FATHER'S INFORMATION ===" << endl;
+    cout << "Father's Full Name (Surname first): ";
+    getline(cin, fatherName);
+
+    cout << "Father's Hometown: ";
+    getline(cin, fatherHometown);
+
+    cout << "Father's Age: ";
+    getline(cin, tempAge);
+    fatherAge = stoi(tempAge);  // Convert string to integer
+
+    cout << "Father's Mortality Status (Alive / Deceased): ";
+    getline(cin, fatherMortalityStatus);
+
+    // Parents' Marital Condition
+    cout << "\n.......... PARENTS' MARITAL CONDITION .........." << endl;
+    cout << "Options:" << endl;
+    cout << "  - Together" << endl;
+    cout << "  - Divorced" << endl;
+    cout << "  - Were not married under Judicial System" << endl;
+    cout << "Enter your choice exactly as shown: ";
+    getline(cin, parentsMaritalCondition);
+
+    // Display Registration Summary
+    cout << "\n_________________________________________________" << endl;
+    cout << "          REGISTRATION SUCCESSFUL!                 " << endl;
+    cout << "\n_________________________________________________" << endl;
+    cout << "\n.......... REGISTRATION SUMMARY .........." << endl;
+    cout << "Surname                  : " << surname << endl;
+    cout << "First Name               : " << firstName << endl;
+    cout << "Other Name(s)            : " << (otherNames.empty() ? "None" : otherNames) << endl;
+    cout << "Date of Birth            : " << dateOfBirth << endl;
+    cout << "Place of Birth           : " << placeOfBirth << endl;
+    cout << "Hometown                 : " << hometown << endl;
+    cout << "Residential Address      : " << residentialAddress << endl;
+
+    cout << "\nMother's Name            : " << motherName << endl;
+    cout << "Mother's Hometown        : " << motherHometown << endl;
+    cout << "Mother's Age             : " << motherAge << endl;
+    cout << "Mother's Mortality Status: " << motherMortalityStatus << endl;
+
+    cout << "\nFather's Name            : " << fatherName << endl;
+    cout << "Father's Hometown        : " << fatherHometown << endl;
+    cout << "Father's Age             : " << fatherAge << endl;
+    cout << "Father's Mortality Status: " << fatherMortalityStatus << endl;
+
+    cout << "\nParents' Marital Condition: " << parentsMaritalCondition << endl;
+
+    cout << "\nThank you for completing your online registration!" << endl;
+    cout << "\nInformation uploaded successfully" <<endl;
+    cout << "Your data has been recorded successfully." << endl;
+
+    return 0;
+}
